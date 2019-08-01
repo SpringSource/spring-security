@@ -20,7 +20,6 @@ import java.net.UnknownHostException;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.util.StringUtils;
 import org.springframework.util.Assert;
 
@@ -34,7 +33,7 @@ import org.springframework.util.Assert;
  * @author Luke Taylor
  * @since 3.0.2
  */
-public final class IpAddressMatcher implements RequestMatcher {
+public final class IpAddressMatcher extends AbstractRequestMatcher {
 	private final int nMaskBits;
 	private final InetAddress requiredAddress;
 
