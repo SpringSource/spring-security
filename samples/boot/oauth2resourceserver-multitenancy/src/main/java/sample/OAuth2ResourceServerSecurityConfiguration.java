@@ -15,9 +15,7 @@
  */
 package sample;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.LinkedHashMap;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -34,6 +32,9 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtBea
 import org.springframework.security.oauth2.server.resource.authentication.OpaqueTokenAuthenticationProvider;
 import org.springframework.security.oauth2.server.resource.introspection.NimbusOpaqueTokenIntrospector;
 import org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector;
+import org.springframework.security.web.authentication.RequestMatchingAuthenticationManagerResolver;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.security.web.util.matcher.RequestMatcher;
 
 /**
  * @author Josh Cummings
@@ -71,16 +72,10 @@ public class OAuth2ResourceServerSecurityConfiguration extends WebSecurityConfig
 
 	@Bean
 	AuthenticationManagerResolver<HttpServletRequest> multitenantAuthenticationManager() {
-		Map<String, AuthenticationManager> authenticationManagers = new HashMap<>();
-		authenticationManagers.put("tenantOne", jwt());
-		authenticationManagers.put("tenantTwo", opaque());
-		return request -> {
-			String[] pathParts = request.getRequestURI().split("/");
-			String tenantId = pathParts.length > 0 ? pathParts[1] : null;
-			return Optional.ofNullable(tenantId)
-					.map(authenticationManagers::get)
-					.orElseThrow(() -> new IllegalArgumentException("unknown tenant"));
-		};
+		LinkedHashMap<RequestMatcher, AuthenticationManager> authenticationManagers = new LinkedHashMap<>();
+		authenticationManagers.put(new AntPathRequestMatcher("/tenantOne/**"), jwt());
+		authenticationManagers.put(new AntPathRequestMatcher("/tenantTwo/**"), opaque());
+		return new RequestMatchingAuthenticationManagerResolver(authenticationManagers);
 	}
 
 	AuthenticationManager jwt() {

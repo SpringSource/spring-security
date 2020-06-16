@@ -122,11 +122,12 @@ public class OAuth2ResourceServerApplicationITests {
 						containsString("Bearer error=\"insufficient_scope\"")));
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void invalidTenantPerformWhenValidBearerTokenThenThrowsException()
 			throws Exception {
 
-		this.mvc.perform(get("/tenantThree").with(bearerToken(this.tenantOneNoScopesToken)));
+		this.mvc.perform(get("/tenantThree").with(bearerToken(this.tenantOneNoScopesToken)))
+				.andExpect(status().isUnauthorized());
 	}
 
 	private static class BearerTokenRequestPostProcessor implements RequestPostProcessor {
