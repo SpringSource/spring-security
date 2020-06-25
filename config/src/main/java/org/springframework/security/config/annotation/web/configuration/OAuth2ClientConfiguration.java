@@ -1,5 +1,5 @@
 /*
- * Copyright 2002-2019 the original author or authors.
+ * Copyright 2002-2020 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,10 +16,14 @@
 package org.springframework.security.config.annotation.web.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
+import org.springframework.security.config.oauth2.client.DefaultOAuth2AuthorizedClientManagerPostProcessor;
+import org.springframework.security.config.oauth2.client.OAuth2ClientRestOperationsPostProcessor;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientProvider;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientProviderBuilder;
 import org.springframework.security.oauth2.client.endpoint.OAuth2AccessTokenResponseClient;
@@ -46,19 +50,34 @@ import java.util.Optional;
  * @since 5.1
  * @see OAuth2ImportSelector
  */
-@Import(OAuth2ClientConfiguration.OAuth2ClientWebMvcImportSelector.class)
+@Import({OAuth2ClientConfiguration.OAuth2ClientSecurityConfiguration.class,
+		OAuth2ClientConfiguration.OAuth2ClientWebMvcImportSelector.class})
 final class OAuth2ClientConfiguration {
+
+	@Configuration(proxyBeanMethods = false)
+	static class OAuth2ClientSecurityConfiguration {
+
+		@Bean
+		BeanDefinitionRegistryPostProcessor oauth2ClientRestOperationsPostProcessor() {
+			return new OAuth2ClientRestOperationsPostProcessor();
+		}
+
+		@Bean
+		BeanDefinitionRegistryPostProcessor defaultOAuth2AuthorizedClientManagerPostProcessor() {
+			return new DefaultOAuth2AuthorizedClientManagerPostProcessor();
+		}
+	}
 
 	static class OAuth2ClientWebMvcImportSelector implements ImportSelector {
 
 		@Override
 		public String[] selectImports(AnnotationMetadata importingClassMetadata) {
 			boolean webmvcPresent = ClassUtils.isPresent(
-				"org.springframework.web.servlet.DispatcherServlet", getClass().getClassLoader());
+					"org.springframework.web.servlet.DispatcherServlet", getClass().getClassLoader());
 
 			return webmvcPresent ?
-				new String[] { "org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration.OAuth2ClientWebMvcSecurityConfiguration" } :
-				new String[] {};
+					new String[] { "org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration.OAuth2ClientWebMvcSecurityConfiguration" } :
+					new String[] {};
 		}
 	}
 
@@ -91,21 +110,21 @@ final class OAuth2ClientConfiguration {
 		}
 
 		@Autowired(required = false)
-		public void setClientRegistrationRepository(List<ClientRegistrationRepository> clientRegistrationRepositories) {
+		void setClientRegistrationRepository(List<ClientRegistrationRepository> clientRegistrationRepositories) {
 			if (clientRegistrationRepositories.size() == 1) {
 				this.clientRegistrationRepository = clientRegistrationRepositories.get(0);
 			}
 		}
 
 		@Autowired(required = false)
-		public void setAuthorizedClientRepository(List<OAuth2AuthorizedClientRepository> authorizedClientRepositories) {
+		void setAuthorizedClientRepository(List<OAuth2AuthorizedClientRepository> authorizedClientRepositories) {
 			if (authorizedClientRepositories.size() == 1) {
 				this.authorizedClientRepository = authorizedClientRepositories.get(0);
 			}
 		}
 
 		@Autowired
-		public void setAccessTokenResponseClient(
+		void setAccessTokenResponseClient(
 				Optional<OAuth2AccessTokenResponseClient<OAuth2ClientCredentialsGrantRequest>> accessTokenResponseClient) {
 			accessTokenResponseClient.ifPresent(client -> this.accessTokenResponseClient = client);
 		}
