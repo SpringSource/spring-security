@@ -189,3 +189,52 @@ The `>` symbol can be thought of as meaning "includes".
 
 Role hierarchies offer a convenient means of simplifying the access-control configuration data for your application and/or reducing the number of authorities which you need to assign to a user.
 For more complex requirements you may wish to define a logical mapping between the specific access-rights your application requires and the roles that are assigned to users, translating between the two when loading the user information.
+
+[[authz-role-hierarchy-builder]]
+=== RoleHierarchyBuilder
+For convenience, there's also a `RoleHierarchyBuilder` class, which allows you to instantiate a `RoleHierarchyImpl` class with configuration provided through a `JavaConfig` style API. Configuration from the previous example using this class looks like this:
+
+[source,java]
+----
+RoleHierarchy roleHierarchy = RoleHierarchyBuilder
+    .builder()
+    .role("ROLE_ADMIN")
+        .includes("ROLE_STAFF")
+        .whichIncludes("ROLE_USER")
+        .whichIncludes("ROLE_GUEST")
+        .build();
+----
+
+The builder class also supports having multiple branches of hierarchy.
+An example might look like this:
+
+[source,java]
+----
+RoleHierarchy roleHierarchy = RoleHierarchyBuilder
+    .builder()
+    .role("ROLE_A")
+        .includes("ROLE_B")
+        .whichIncludes("ROLE_C")
+        .and()
+    .role("ROLE_A")
+        .includes("ROLE_D")
+        .whichIncludes("ROLE_E")
+        .and()
+    .role("ROLE_D")
+        .includes("ROLE_F")
+        .build();
+----
+
+This translates into role hierarchy tree looking like this:
+
+....
+            ROLE_A
+            /    \
+           /      \
+          -        -
+       ROLE_B    ROLE_D -------------+
+        /            \               |
+       /              \              |
+      -                -             |
+   ROLE_C            ROLE_E       ROLE_F
+....
