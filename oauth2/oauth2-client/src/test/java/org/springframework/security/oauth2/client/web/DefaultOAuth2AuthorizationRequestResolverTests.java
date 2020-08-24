@@ -154,12 +154,15 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 		assertThat(authorizationRequest.getState()).isNotNull();
 		assertThat(authorizationRequest.getAdditionalParameters()).doesNotContainKey(OAuth2ParameterNames.REGISTRATION_ID);
 		assertThat(authorizationRequest.getAttributes())
-				.containsExactly(entry(OAuth2ParameterNames.REGISTRATION_ID, clientRegistration.getRegistrationId()));
+				.containsOnlyKeys(OAuth2ParameterNames.REGISTRATION_ID, PkceParameterNames.CODE_VERIFIER)
+				.containsEntry(OAuth2ParameterNames.REGISTRATION_ID, clientRegistration.getRegistrationId());
 		assertThat(authorizationRequest.getAuthorizationRequestUri())
 				.matches("https://example.com/login/oauth/authorize\\?" +
 						"response_type=code&client_id=client-id&" +
 						"scope=read:user&state=.{15,}&" +
-						"redirect_uri=http://localhost/login/oauth2/code/registration-id");
+						"redirect_uri=http://localhost/login/oauth2/code/registration-id&" +
+						"code_challenge_method=S256&" +
+						"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -172,7 +175,8 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 		OAuth2AuthorizationRequest authorizationRequest = this.resolver.resolve(request, clientRegistration.getRegistrationId());
 		assertThat(authorizationRequest).isNotNull();
 		assertThat(authorizationRequest.getAttributes())
-				.containsExactly(entry(OAuth2ParameterNames.REGISTRATION_ID, clientRegistration.getRegistrationId()));
+				.containsOnlyKeys(OAuth2ParameterNames.REGISTRATION_ID, PkceParameterNames.CODE_VERIFIER)
+				.containsEntry(OAuth2ParameterNames.REGISTRATION_ID, clientRegistration.getRegistrationId());
 	}
 
 	@Test
@@ -294,7 +298,9 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 				.matches("https://example.com/login/oauth/authorize\\?" +
 						"response_type=code&client_id=client-id&" +
 						"scope=read:user&state=.{15,}&" +
-						"redirect_uri=http://localhost/login/oauth2/code/registration-id");
+						"redirect_uri=http://localhost/login/oauth2/code/registration-id&" +
+						"code_challenge_method=S256&" +
+						"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -312,7 +318,9 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 				.matches("https://example.com/login/oauth/authorize\\?" +
 						"response_type=code&client_id=client-id&" +
 						"scope=read:user&state=.{15,}&" +
-						"redirect_uri=https://example.com/login/oauth2/code/registration-id");
+						"redirect_uri=https://example.com/login/oauth2/code/registration-id&" +
+						"code_challenge_method=S256&" +
+						"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -327,7 +335,9 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 				.matches("https://example.com/login/oauth/authorize\\?" +
 						"response_type=code&client_id=client-id&" +
 						"scope=read:user&state=.{15,}&" +
-						"redirect_uri=http://localhost/authorize/oauth2/code/registration-id");
+						"redirect_uri=http://localhost/authorize/oauth2/code/registration-id&" +
+						"code_challenge_method=S256&" +
+						"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -342,7 +352,9 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 				.matches("https://example.com/login/oauth/authorize\\?" +
 						"response_type=code&client_id=client-id-2&" +
 						"scope=read:user&state=.{15,}&" +
-						"redirect_uri=http://localhost/login/oauth2/code/registration-id-2");
+						"redirect_uri=http://localhost/login/oauth2/code/registration-id-2&" +
+						"code_challenge_method=S256&" +
+						"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -358,7 +370,9 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 				.matches("https://example.com/login/oauth/authorize\\?" +
 						"response_type=code&client_id=client-id&" +
 						"scope=read:user&state=.{15,}&" +
-						"redirect_uri=http://localhost/authorize/oauth2/code/registration-id");
+						"redirect_uri=http://localhost/authorize/oauth2/code/registration-id&" +
+						"code_challenge_method=S256&" +
+						"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -374,7 +388,9 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 				.matches("https://example.com/login/oauth/authorize\\?" +
 						"response_type=code&client_id=client-id-2&" +
 						"scope=read:user&state=.{15,}&" +
-						"redirect_uri=http://localhost/login/oauth2/code/registration-id-2");
+						"redirect_uri=http://localhost/login/oauth2/code/registration-id-2&" +
+						"code_challenge_method=S256&" +
+						"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -442,7 +458,9 @@ public class DefaultOAuth2AuthorizationRequestResolverTests {
 						"response_type=code&client_id=client-id&" +
 						"scope=openid&state=.{15,}&" +
 						"redirect_uri=http://localhost/login/oauth2/code/oidc-registration-id&" +
-						"nonce=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
+						"code_challenge_method=S256&" +
+						"nonce=([a-zA-Z0-9\\-\\.\\_\\~]){43}&" +
+						"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	// gh-7696

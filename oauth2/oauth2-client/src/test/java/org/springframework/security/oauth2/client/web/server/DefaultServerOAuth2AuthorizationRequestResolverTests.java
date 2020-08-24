@@ -92,7 +92,9 @@ public class DefaultServerOAuth2AuthorizationRequestResolverTests {
 		assertThat(request.getAuthorizationRequestUri()).matches("https://example.com/login/oauth/authorize\\?" +
 				"response_type=code&client_id=client-id&" +
 				"scope=read:user&state=.*?&" +
-				"redirect_uri=/login/oauth2/code/registration-id");
+				"redirect_uri=/login/oauth2/code/registration-id&" +
+				"code_challenge_method=S256&" +
+				"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -106,7 +108,9 @@ public class DefaultServerOAuth2AuthorizationRequestResolverTests {
 		assertThat(request.getAuthorizationRequestUri()).matches("https://example.com/login/oauth/authorize\\?" +
 				"response_type=code&client_id=client-id&" +
 				"scope=read:user&state=.*?&" +
-				"redirect_uri=/login/oauth2/code/registration-id");
+				"redirect_uri=/login/oauth2/code/registration-id&" +
+				"code_challenge_method=S256&" +
+				"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	@Test
@@ -144,7 +148,9 @@ public class DefaultServerOAuth2AuthorizationRequestResolverTests {
 				"response_type=code&client_id=client-id&" +
 				"scope=openid&state=.*?&" +
 				"redirect_uri=/login/oauth2/code/registration-id&" +
-				"nonce=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
+				"code_challenge_method=S256&" +
+				"nonce=([a-zA-Z0-9\\-\\.\\_\\~]){43}&" +
+				"code_challenge=([a-zA-Z0-9\\-\\.\\_\\~]){43}");
 	}
 
 	// gh-7696
