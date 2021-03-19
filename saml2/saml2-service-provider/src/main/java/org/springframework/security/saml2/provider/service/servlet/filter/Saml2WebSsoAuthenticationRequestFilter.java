@@ -145,19 +145,22 @@ public class Saml2WebSsoAuthenticationRequestFilter extends OncePerRequestFilter
 			response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
 			return;
 		}
-		RelyingPartyRegistration relyingParty = context.getRelyingPartyRegistration();
-		if (relyingParty.getAssertingPartyDetails().getSingleSignOnServiceBinding() == Saml2MessageBinding.REDIRECT) {
-			sendRedirect(response, context);
+		RelyingPartyRegistration registration = context.getRelyingPartyRegistration();
+		Saml2MessageBinding binding = registration.getAssertingPartyDetails().getSingleSignOnServiceBinding();
+		if (binding == Saml2MessageBinding.REDIRECT) {
+			Saml2RedirectAuthenticationRequest authenticationRequest = this.authenticationRequestFactory
+					.createRedirectAuthenticationRequest(context);
+			sendRedirect(response, authenticationRequest);
 		}
 		else {
-			sendPost(response, context);
+			Saml2PostAuthenticationRequest authenticationRequest = this.authenticationRequestFactory
+					.createPostAuthenticationRequest(context);
+			sendPost(response, authenticationRequest);
 		}
 	}
 
-	private void sendRedirect(HttpServletResponse response, Saml2AuthenticationRequestContext context)
+	private void sendRedirect(HttpServletResponse response, Saml2RedirectAuthenticationRequest authenticationRequest)
 			throws IOException {
-		Saml2RedirectAuthenticationRequest authenticationRequest = this.authenticationRequestFactory
-				.createRedirectAuthenticationRequest(context);
 		UriComponentsBuilder uriBuilder = UriComponentsBuilder
 				.fromUriString(authenticationRequest.getAuthenticationRequestUri());
 		addParameter("SAMLRequest", authenticationRequest.getSamlRequest(), uriBuilder);
@@ -176,9 +179,8 @@ public class Saml2WebSsoAuthenticationRequestFilter extends OncePerRequestFilter
 		}
 	}
 
-	private void sendPost(HttpServletResponse response, Saml2AuthenticationRequestContext context) throws IOException {
-		Saml2PostAuthenticationRequest authenticationRequest = this.authenticationRequestFactory
-				.createPostAuthenticationRequest(context);
+	private void sendPost(HttpServletResponse response, Saml2PostAuthenticationRequest authenticationRequest)
+			throws IOException {
 		String html = createSamlPostRequestFormData(authenticationRequest);
 		response.setContentType(MediaType.TEXT_HTML_VALUE);
 		response.getWriter().write(html);
