@@ -191,6 +191,18 @@ public class OpenSamlAuthenticationRequestFactoryTests {
 	}
 
 	@Test
+	public void createAuthenticationRequestWhenSetNameIDPolicyThenReturnsCorrectNameIDPolicy() {
+		RelyingPartyRegistration registration = TestRelyingPartyRegistrations.full().nameIDFormat("format").build();
+		this.context = this.contextBuilder.relayState("Relay State Value").relyingPartyRegistration(registration)
+				.build();
+		AuthnRequest authn = getAuthNRequest(Saml2MessageBinding.POST);
+		assertThat(authn.getNameIDPolicy()).isNotNull();
+		assertThat(authn.getNameIDPolicy().getAllowCreate()).isFalse();
+		assertThat(authn.getNameIDPolicy().getFormat()).isEqualTo("format");
+		assertThat(authn.getNameIDPolicy().getSPNameQualifier()).isNull();
+	}
+
+	@Test
 	public void createAuthenticationRequestWhenSetUnsupportredUriThenThrowsIllegalArgumentException() {
 		assertThatIllegalArgumentException().isThrownBy(() -> this.factory.setProtocolBinding("my-invalid-binding"))
 				.withMessageContaining("my-invalid-binding");

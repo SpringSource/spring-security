@@ -59,4 +59,13 @@ public class OpenSamlMetadataResolverTests {
 				.contains("Location=\"https://rp.example.org/acs\" index=\"1\"");
 	}
 
+	@Test
+	public void resolveWhenRelyingPartyNameIDFormatThenMetadataMatches() {
+		RelyingPartyRegistration relyingPartyRegistration = TestRelyingPartyRegistrations.full().nameIDFormat("format")
+				.build();
+		OpenSamlMetadataResolver openSamlMetadataResolver = new OpenSamlMetadataResolver();
+		String metadata = openSamlMetadataResolver.resolve(relyingPartyRegistration);
+		assertThat(metadata).contains("<md:NameIDFormat>format</md:NameIDFormat>");
+	}
+
 }
