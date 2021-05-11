@@ -13,6 +13,7 @@ buildscript {
 
 apply plugin: 'io.spring.nohttp'
 apply plugin: 'locks'
+apply plugin: 's101'
 apply plugin: 'io.spring.convention.root'
 apply plugin: 'org.jetbrains.kotlin.jvm'
 apply plugin: 'org.springframework.security.update-dependencies'

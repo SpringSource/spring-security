@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyMeasureData formatVersion="2" specViolationDependencies="0" specViolationContainers="0" specItemViolations="0" specDependencyViolatingItems="0" biggestUnspecifiedNumber="0" specCoverage="0.0" feedbackDependencies="1180" totalProblemDependencies="1180" tangledDesign="12" tanglePercentage="41.0" biggestClassTangle="3" fatPackage="6" fatClass="32" fatMethod="9" fatPercentage="43.0" numDiagrams="0" numDiagramDependencyViolations="0" numDiagramDependencyViolatingItems="0" numUnassociatedItems="0" numDiagramViolationContainers="0" comparedTo="recent">
+    <enabled-optional-measures/>
+    <numberStatistics>
+        <number name="formatVersion" count="2.0" delta="0.0"/>
+        <number name="specViolationDependencies" count="0.0" delta="0.0"/>
+        <number name="specViolationContainers" count="0.0" delta="0.0"/>
+        <number name="specItemViolations" count="0.0" delta="0.0"/>
+        <number name="specDependencyViolatingItems" count="0.0" delta="0.0"/>
+        <number name="biggestUnspecifiedNumber" count="0.0" delta="0.0"/>
+        <number name="specCoverage" count="0.0" delta="0.0"/>
+        <number name="feedbackDependencies" count="1180.0" delta="-15.0"/>
+        <number name="totalProblemDependencies" count="1180.0" delta="-15.0"/>
+        <number name="tangledDesign" count="12.0" delta="0.0"/>
+        <number name="tanglePercentage" count="41.0" delta="0.0"/>
+        <number name="biggestClassTangle" count="3.0" delta="0.0"/>
+        <number name="fatPackage" count="6.0" delta="0.0"/>
+        <number name="fatClass" count="32.0" delta="0.0"/>
+        <number name="fatMethod" count="9.0" delta="0.0"/>
+        <number name="fatPercentage" count="43.0" delta="0.0"/>
+        <number name="numDiagrams" count="0.0" delta="0.0"/>
+        <number name="numDiagramDependencyViolations" count="0.0" delta="0.0"/>
+        <number name="numDiagramDependencyViolatingItems" count="0.0" delta="0.0"/>
+        <number name="numUnassociatedItems" count="0.0" delta="0.0"/>
+        <number name="numDiagramViolationContainers" count="0.0" delta="0.0"/>
+        <number name="moduleAPIViolations" count="0.0" delta="0.0"/>
+        <number name="moduleRequiresViolations" count="0.0" delta="0.0"/>
+        <number name="moduleViolatingItems" count="0.0" delta="0.0"/>
+        <number name="moduleCoverage" count="0.0" delta="0.0"/>
+    </numberStatistics>
+    <listStatistics>
+        <list name="tangledDesign" count="12.0" countSum="1180.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="1.0" decreasedSum="15.0" changed="1.0" changedSum="-15.0"/>
+        <list name="fatPackage" count="6.0" countSum="1181.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="fatClass" count="32.0" countSum="6130.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="fatMethod" count="9.0" countSum="180.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="specViolationContainers" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="specViolationDependencies" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="specItemViolations" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="feedbackDependencies" count="30.0" countSum="1180.0" added="1.0" addedSum="1.0" removed="2.0" removedSum="16.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="biggestClassTangle" count="3.0" countSum="1446.0" added="3.0" addedSum="1446.0" removed="3.0" removedSum="39.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="archViolationContainers" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="archViolations" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="unassociatedItems" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="moduleViolations" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="specDependencyViolatingItems" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="archDependencyViolatingItems" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+        <list name="moduleDependencyViolatingItems" count="0.0" countSum="0.0" added="0.0" addedSum="0.0" removed="0.0" removedSum="0.0" increased="0.0" increasedSum="0.0" decreased="0.0" decreasedSum="0.0" changed="0.0" changedSum="0.0"/>
+    </listStatistics>
+    <specOverlays/>
+    <archOverlays/>
+    <tangledDesign>
+        <node id="51554" measure="2" measureDelta="0" impact="1451" threshold="0.0" state="3"/>
+        <node id="51497" measure="2" measureDelta="0" impact="13674" threshold="0.0" state="3"/>
+        <node id="51485" measure="7" measureDelta="0" impact="109253" threshold="0.0" state="3"/>
+        <node id="51484" measure="9" measureDelta="0" impact="21176" threshold="0.0" state="3"/>
+        <node id="51524" measure="11" measureDelta="0" impact="10276" threshold="0.0" state="3"/>
+        <node id="51590" measure="17" measureDelta="0" impact="7620" threshold="0.0" state="3"/>
+        <node id="51503" measure="24" measureDelta="0" impact="42558" threshold="0.0" state="3"/>
+        <node id="51563" measure="75" measureDelta="0" impact="18162" threshold="0.0" state="3"/>
+        <node id="51542" measure="98" measureDelta="-15" impact="208477" threshold="0.0" state="2"/>
+        <node id="51541" measure="123" measureDelta="0" impact="83628" threshold="0.0" state="3"/>
+        <node id="51540" measure="405" measureDelta="0" impact="61646" threshold="0.0" state="3"/>
+        <node id="55756" measure="407" measureDelta="0" impact="255965" threshold="0.0" state="3"/>
+    </tangledDesign>
+    <fatPackage>
+        <node id="51617" measure="143" measureDelta="0" impact="12956" threshold="120.0" state="3"/>
+        <node id="51563" measure="152" measureDelta="0" impact="49004" threshold="120.0" state="3"/>
+        <node id="51620" measure="152" measureDelta="0" impact="13382" threshold="120.0" state="3"/>
+        <node id="51564" measure="213" measureDelta="0" impact="51591" threshold="120.0" state="3"/>
+        <node id="51556" measure="235" measureDelta="0" impact="36957" threshold="120.0" state="3"/>
+        <node id="51546" measure="286" measureDelta="0" impact="82625" threshold="120.0" state="3"/>
+    </fatPackage>
+    <fatClass>
+        <node id="99" measure="121" measureDelta="0" impact="1435" threshold="120.0" state="3"/>
+        <node id="78" measure="121" measureDelta="0" impact="2305" threshold="120.0" state="3"/>
+        <node id="2515" measure="123" measureDelta="0" impact="1254" threshold="120.0" state="3"/>
+        <node id="1535" measure="127" measureDelta="0" impact="804" threshold="120.0" state="3"/>
+        <node id="601" measure="128" measureDelta="0" impact="1297" threshold="120.0" state="3"/>
+        <node id="1884" measure="129" measureDelta="0" impact="1670" threshold="120.0" state="3"/>
+        <node id="6123" measure="129" measureDelta="0" impact="2559" threshold="120.0" state="3"/>
+        <node id="1289" measure="130" measureDelta="0" impact="1164" threshold="120.0" state="3"/>
+        <node id="2731" measure="134" measureDelta="0" impact="1578" threshold="120.0" state="3"/>
+        <node id="1126" measure="135" measureDelta="0" impact="1519" threshold="120.0" state="3"/>
+        <node id="371" measure="135" measureDelta="0" impact="1147" threshold="120.0" state="3"/>
+        <node id="963" measure="138" measureDelta="0" impact="1219" threshold="120.0" state="3"/>
+        <node id="3280" measure="140" measureDelta="0" impact="1861" threshold="120.0" state="3"/>
+        <node id="1056" measure="146" measureDelta="0" impact="1569" threshold="120.0" state="3"/>
+        <node id="1007" measure="162" measureDelta="0" impact="1492" threshold="120.0" state="3"/>
+        <node id="512" measure="163" measureDelta="0" impact="1787" threshold="120.0" state="3"/>
+        <node id="1461" measure="174" measureDelta="0" impact="2784" threshold="120.0" state="3"/>
+        <node id="2250" measure="178" measureDelta="0" impact="2491" threshold="120.0" state="3"/>
+        <node id="2969" measure="180" measureDelta="0" impact="2020" threshold="120.0" state="3"/>
+        <node id="611" measure="203" measureDelta="0" impact="2563" threshold="120.0" state="3"/>
+        <node id="3758" measure="208" measureDelta="0" impact="1696" threshold="120.0" state="3"/>
+        <node id="204" measure="208" measureDelta="0" impact="2969" threshold="120.0" state="3"/>
+        <node id="56" measure="212" measureDelta="0" impact="2255" threshold="120.0" state="3"/>
+        <node id="717" measure="224" measureDelta="0" impact="2112" threshold="120.0" state="3"/>
+        <node id="464" measure="228" measureDelta="0" impact="2121" threshold="120.0" state="3"/>
+        <node id="2695" measure="244" measureDelta="0" impact="2155" threshold="120.0" state="3"/>
+        <node id="219" measure="251" measureDelta="0" impact="2350" threshold="120.0" state="3"/>
+        <node id="84" measure="251" measureDelta="0" impact="4738" threshold="120.0" state="3"/>
+        <node id="11" measure="254" measureDelta="0" impact="1832" threshold="120.0" state="3"/>
+        <node id="1936" measure="266" measureDelta="0" impact="3905" threshold="120.0" state="3"/>
+        <node id="49" measure="268" measureDelta="0" impact="2211" threshold="120.0" state="3"/>
+        <node id="341" measure="620" measureDelta="0" impact="5964" threshold="120.0" state="3"/>
+    </fatClass>
+    <fatMethod>
+        <node id="24840" measure="16" measureDelta="0" impact="109" threshold="15.0" state="3"/>
+        <node id="25412" measure="16" measureDelta="0" impact="199" threshold="15.0" state="3"/>
+        <node id="31884" measure="16" measureDelta="0" impact="137" threshold="15.0" state="3"/>
+        <node id="27427" measure="19" measureDelta="0" impact="283" threshold="15.0" state="3"/>
+        <node id="24857" measure="19" measureDelta="0" impact="362" threshold="15.0" state="3"/>
+        <node id="36004" measure="19" measureDelta="0" impact="168" threshold="15.0" state="3"/>
+        <node id="44181" measure="24" measureDelta="0" impact="370" threshold="15.0" state="3"/>
+        <node id="8876" measure="25" measureDelta="0" impact="292" threshold="15.0" state="3"/>
+        <node id="36785" measure="26" measureDelta="0" impact="370" threshold="15.0" state="3"/>
+    </fatMethod>
+    <specViolationContainers/>
+    <specViolationDependencies/>
+    <specItemViolations/>
+    <feedbackDependencies>
+        <edge from="297" to="51655" weight="8" weightDelta="0" state="3"/>
+        <edge from="2052" to="51688" weight="16" weightDelta="0" state="3"/>
+        <edge from="2175" to="51688" weight="4" weightDelta="0" state="3"/>
+        <edge from="2205" to="2676" weight="3" weightDelta="0" state="3"/>
+        <edge from="2347" to="51616" weight="36" weightDelta="0" state="3"/>
+        <edge from="2501" to="51688" weight="8" weightDelta="0" state="3"/>
+        <edge from="5993" to="51484" weight="1" weightDelta="0" state="3"/>
+        <edge from="18026" to="3941" weight="407" weightDelta="0" state="3"/>
+        <edge from="51522" to="51502" weight="8" weightDelta="0" state="3"/>
+        <edge from="51522" to="51617" weight="14" weightDelta="0" state="3"/>
+        <edge from="51541" to="51557" weight="43" weightDelta="0" state="3"/>
+        <edge from="51541" to="51644" weight="36" weightDelta="0" state="3"/>
+        <edge from="51553" to="51734" weight="2" weightDelta="0" state="3"/>
+        <edge from="51554" to="51540" weight="84" weightDelta="0" state="3"/>
+        <edge from="51560" to="51714" weight="1" weightDelta="0" state="3"/>
+        <edge from="51592" to="51523" weight="11" weightDelta="0" state="3"/>
+        <edge from="51613" to="51577" weight="4" weightDelta="0" state="3"/>
+        <edge from="51613" to="51755" weight="4" weightDelta="0" state="3"/>
+        <edge from="51614" to="51564" weight="199" weightDelta="0" state="3"/>
+        <edge from="51614" to="51668" weight="86" weightDelta="0" state="3"/>
+        <edge from="51644" to="51702" weight="1" weightDelta="1" state="0"/>
+        <edge from="51668" to="51564" weight="120" weightDelta="0" state="3"/>
+        <edge from="51672" to="51836" weight="16" weightDelta="0" state="3"/>
+        <edge from="51704" to="51554" weight="39" weightDelta="0" state="3"/>
+        <edge from="51730" to="51672" weight="1" weightDelta="0" state="3"/>
+        <edge from="51735" to="51502" weight="2" weightDelta="0" state="3"/>
+        <edge from="51772" to="51496" weight="2" weightDelta="0" state="3"/>
+        <edge from="51815" to="51541" weight="17" weightDelta="0" state="3"/>
+        <edge from="51871" to="51541" weight="1" weightDelta="0" state="3"/>
+        <edge from="51912" to="51484" weight="6" weightDelta="0" state="3"/>
+        <edge from="55757" to="55758" weight="10" weightDelta="-10" state="1"/>
+        <edge from="55759" to="55760" weight="6" weightDelta="-6" state="1"/>
+    </feedbackDependencies>
+    <biggestClassTangle>
+        <node id="1873" measure="350" measureDelta="350" state="0"/>
+        <node id="7796" measure="365" measureDelta="365" state="0"/>
+        <node id="1518" measure="731" measureDelta="731" state="0"/>
+        <node id="55761" measure="11" measureDelta="-11" state="1"/>
+        <node id="55762" measure="11" measureDelta="-11" state="1"/>
+        <node id="55763" measure="17" measureDelta="-17" state="1"/>
+    </biggestClassTangle>
+    <archViolationContainers/>
+    <archViolations/>
+    <unassociatedItems/>
+    <moduleViolations/>
+    <nodeMap>
+        <entry>
+            <key>512</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.server.OAuth2ResourceServerSpecTests" type="class" localSize="1" size="1787" displayName="spring-security-config.org.springframework.security.config.web.server.OAuth2ResourceServerSpecTests" navigationName="spring-security-config.org.springframework.security.config.web.server.OAuth2ResourceServerSpecTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51714</key>
+            <value realName="spring-security-web.org.springframework.security.web.session" type="package" localSize="0" size="2134" displayName="spring-security-web.org.springframework.security.web.session" navigationName="spring-security-web.org.springframework.security.web.session" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2052</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2LoginDsl" type="class" localSize="1" size="600" displayName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2LoginDsl" navigationName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2LoginDsl" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>24840</key>
+            <value realName="spring-security-oauth2-core.org.springframework.security.oauth2.core.oidc.DefaultAddressStandardClaim.equals(java.lang.Object):boolean" type="method" localSize="109" size="109" displayName="spring-security-oauth2-core.org.springframework.security.oauth2.core.oidc.DefaultAddressStandardClaim.equals(java.lang.Object):boolean" navigationName="spring-security-oauth2-core.org.springframework.security.oauth2.core.oidc.DefaultAddressStandardClaim.equals(java.lang.Object):boolean" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1289</key>
+            <value realName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction" type="class" localSize="1" size="1164" displayName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction" navigationName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>11</key>
+            <value realName="saml2-service-provider-opensaml4.org.springframework.security.saml2.provider.service.authentication.OpenSaml4AuthenticationProviderTests" type="class" localSize="1" size="1832" displayName="saml2-service-provider-opensaml4.org.springframework.security.saml2.provider.service.authentication.OpenSaml4AuthenticationProviderTests" navigationName="saml2-service-provider-opensaml4.org.springframework.security.saml2.provider.service.authentication.OpenSaml4AuthenticationProviderTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51730</key>
+            <value realName="spring-security-test.org.springframework.security.test.web.servlet.setup" type="package" localSize="0" size="426" displayName="spring-security-test.org.springframework.security.test.web.servlet.setup" navigationName="spring-security-test.org.springframework.security.test.web.servlet.setup" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51734</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.authentication.builders" type="package" localSize="0" size="173" displayName="spring-security-config.org.springframework.security.config.annotation.authentication.builders" navigationName="spring-security-config.org.springframework.security.config.annotation.authentication.builders" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51735</key>
+            <value realName="spring-security-core.org.springframework.security.util" type="package" localSize="0" size="673" displayName="spring-security-core.org.springframework.security.util" navigationName="spring-security-core.org.springframework.security.util" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>24857</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2LoginDsl$get$1.invoke(org.springframework.security.config.annotation.web.configurers.oauth2.client.OAuth2LoginConfigurer):void" type="method" localSize="362" size="362" displayName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2LoginDsl$get$1.invoke(org.springframework.security.config.annotation.web.configurers.oauth2.client.OAuth2LoginConfigurer):void" navigationName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2LoginDsl$get$1.invoke(org.springframework.security.config.annotation.web.configurers.oauth2.client.OAuth2LoginConfigurer):void" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51484</key>
+            <value realName="spring-security-web.org.springframework.security.web" type="package" localSize="0" size="109061" displayName="spring-security-web.org.springframework.security.web" navigationName="spring-security-web.org.springframework.security.web" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51485</key>
+            <value realName="spring-security-web.org.springframework.security" type="package" localSize="0" size="109303" displayName="spring-security-web.org.springframework.security" navigationName="spring-security-web.org.springframework.security" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1056</key>
+            <value realName="spring-security-web.org.springframework.security.web.csrf.CsrfFilterTests" type="class" localSize="1" size="1569" displayName="spring-security-web.org.springframework.security.web.csrf.CsrfFilterTests" navigationName="spring-security-web.org.springframework.security.web.csrf.CsrfFilterTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>27427</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.server.ServerHeadersDsl$get$1.invoke(org.springframework.security.config.web.server.ServerHttpSecurity$HeaderSpec):void" type="method" localSize="283" size="283" displayName="spring-security-config.org.springframework.security.config.web.server.ServerHeadersDsl$get$1.invoke(org.springframework.security.config.web.server.ServerHttpSecurity$HeaderSpec):void" navigationName="spring-security-config.org.springframework.security.config.web.server.ServerHeadersDsl$get$1.invoke(org.springframework.security.config.web.server.ServerHttpSecurity$HeaderSpec):void" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51496</key>
+            <value realName="spring-security-oauth2-resource-server.org.springframework.security.oauth2.server" type="package" localSize="0" size="13544" displayName="spring-security-oauth2-resource-server.org.springframework.security.oauth2.server" navigationName="spring-security-oauth2-resource-server.org.springframework.security.oauth2.server" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>297</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.SessionManagementDsl" type="class" localSize="1" size="377" displayName="spring-security-config.org.springframework.security.config.web.servlet.SessionManagementDsl" navigationName="spring-security-config.org.springframework.security.config.web.servlet.SessionManagementDsl" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51497</key>
+            <value realName="spring-security-oauth2-resource-server.org.springframework.security.oauth2" type="package" localSize="0" size="13674" displayName="spring-security-oauth2-resource-server.org.springframework.security.oauth2" navigationName="spring-security-oauth2-resource-server.org.springframework.security.oauth2" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2347</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.HeadersDsl" type="class" localSize="1" size="652" displayName="spring-security-config.org.springframework.security.config.web.servlet.HeadersDsl" navigationName="spring-security-config.org.springframework.security.config.web.servlet.HeadersDsl" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51755</key>
+            <value realName="spring-security-web.org.springframework.security.web.servlet" type="package" localSize="0" size="1270" displayName="spring-security-web.org.springframework.security.web.servlet" navigationName="spring-security-web.org.springframework.security.web.servlet" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51502</key>
+            <value realName="spring-security-core.org.springframework.security.access" type="package" localSize="0" size="18067" displayName="spring-security-core.org.springframework.security.access" navigationName="spring-security-core.org.springframework.security.access" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51503</key>
+            <value realName="spring-security-core.org.springframework.security" type="package" localSize="0" size="52518" displayName="spring-security-core.org.springframework.security" navigationName="spring-security-core.org.springframework.security" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>49</key>
+            <value realName="spring-security-config.org.springframework.security.config.http.HttpHeadersConfigTests" type="class" localSize="1" size="2211" displayName="spring-security-config.org.springframework.security.config.http.HttpHeadersConfigTests" navigationName="spring-security-config.org.springframework.security.config.http.HttpHeadersConfigTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>56</key>
+            <value realName="spring-security-config.org.springframework.security.config.http.AuthenticationConfigBuilder" type="class" localSize="1" size="2255" displayName="spring-security-config.org.springframework.security.config.http.AuthenticationConfigBuilder" navigationName="spring-security-config.org.springframework.security.config.http.AuthenticationConfigBuilder" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51772</key>
+            <value realName="spring-security-oauth2-resource-server.org.springframework.security.oauth2.core" type="package" localSize="0" size="130" displayName="spring-security-oauth2-resource-server.org.springframework.security.oauth2.core" navigationName="spring-security-oauth2-resource-server.org.springframework.security.oauth2.core" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51522</key>
+            <value realName="spring-security-core.org.springframework.security.core" type="package" localSize="0" size="10765" displayName="spring-security-core.org.springframework.security.core" navigationName="spring-security-core.org.springframework.security.core" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51523</key>
+            <value realName="spring-security-ldap.org.springframework.security.ldap.authentication" type="package" localSize="0" size="4529" displayName="spring-security-ldap.org.springframework.security.ldap.authentication" navigationName="spring-security-ldap.org.springframework.security.ldap.authentication" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>25412</key>
+            <value realName="spring-security-crypto.org.springframework.security.crypto.bcrypt.BCrypt.hashpw(byte[], java.lang.String):java.lang.String" type="method" localSize="199" size="199" displayName="spring-security-crypto.org.springframework.security.crypto.bcrypt.BCrypt.hashpw(byte[], java.lang.String):java.lang.String" navigationName="spring-security-crypto.org.springframework.security.crypto.bcrypt.BCrypt.hashpw(byte[], java.lang.String):java.lang.String" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51524</key>
+            <value realName="spring-security-ldap.org.springframework.security.ldap" type="package" localSize="0" size="16224" displayName="spring-security-ldap.org.springframework.security.ldap" navigationName="spring-security-ldap.org.springframework.security.ldap" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>78</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.HeadersConfigurerTests" type="class" localSize="1" size="2305" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.HeadersConfigurerTests" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.HeadersConfigurerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1873</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.LogoutConfigurer" type="class" localSize="1" size="350" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.LogoutConfigurer" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.LogoutConfigurer" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51540</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web" type="package" localSize="0" size="69524" displayName="spring-security-config.org.springframework.security.config.annotation.web" navigationName="spring-security-config.org.springframework.security.config.annotation.web" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>84</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.server.ServerHttpSecurity" type="class" localSize="1" size="4738" displayName="spring-security-config.org.springframework.security.config.web.server.ServerHttpSecurity" navigationName="spring-security-config.org.springframework.security.config.web.server.ServerHttpSecurity" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51541</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation" type="package" localSize="0" size="88428" displayName="spring-security-config.org.springframework.security.config.annotation" navigationName="spring-security-config.org.springframework.security.config.annotation" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>341</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurerTests" type="class" localSize="1" size="5964" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurerTests" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51542</key>
+            <value realName="spring-security-config.org.springframework.security.config" type="package" localSize="0" size="220668" displayName="spring-security-config.org.springframework.security.config" navigationName="spring-security-config.org.springframework.security.config" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>601</key>
+            <value realName="spring-security-core.org.springframework.security.provisioning.JdbcUserDetailsManager" type="class" localSize="1" size="1297" displayName="spring-security-core.org.springframework.security.provisioning.JdbcUserDetailsManager" navigationName="spring-security-core.org.springframework.security.provisioning.JdbcUserDetailsManager" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51546</key>
+            <value realName="spring-security-oauth2-client.org.springframework.security.oauth2.client" type="package" localSize="0" size="82625" displayName="spring-security-oauth2-client.org.springframework.security.oauth2.client" navigationName="spring-security-oauth2-client.org.springframework.security.oauth2.client" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1884</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.CsrfConfigurerTests" type="class" localSize="1" size="1670" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.CsrfConfigurerTests" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.CsrfConfigurerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51553</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.authentication.configurers" type="package" localSize="0" size="1278" displayName="spring-security-config.org.springframework.security.config.annotation.authentication.configurers" navigationName="spring-security-config.org.springframework.security.config.annotation.authentication.configurers" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51554</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.authentication" type="package" localSize="0" size="6014" displayName="spring-security-config.org.springframework.security.config.annotation.authentication" navigationName="spring-security-config.org.springframework.security.config.annotation.authentication" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>611</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurerTests" type="class" localSize="1" size="2563" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurerTests" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>99</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurerTests" type="class" localSize="1" size="1435" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurerTests" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51556</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.server" type="package" localSize="0" size="36957" displayName="spring-security-config.org.springframework.security.config.web.server" navigationName="spring-security-config.org.springframework.security.config.web.server" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>3941</key>
+            <value realName="spring-security-config" type="jar" localSize="0" size="221773" displayName="spring-security-config" navigationName="spring-security-config" isModule="true" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51557</key>
+            <value realName="spring-security-config.org.springframework.security.config.web" type="package" localSize="0" size="85961" displayName="spring-security-config.org.springframework.security.config.web" navigationName="spring-security-config.org.springframework.security.config.web" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1126</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.socket.AbstractSecurityWebSocketMessageBrokerConfigurerTests" type="class" localSize="1" size="1519" displayName="spring-security-config.org.springframework.security.config.annotation.web.socket.AbstractSecurityWebSocketMessageBrokerConfigurerTests" navigationName="spring-security-config.org.springframework.security.config.annotation.web.socket.AbstractSecurityWebSocketMessageBrokerConfigurerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51815</key>
+            <value realName="spring-security-config.org.springframework.security.config.core" type="package" localSize="0" size="998" displayName="spring-security-config.org.springframework.security.config.core" navigationName="spring-security-config.org.springframework.security.config.core" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51560</key>
+            <value realName="spring-security-web.org.springframework.security.web.context" type="package" localSize="0" size="5425" displayName="spring-security-web.org.springframework.security.web.context" navigationName="spring-security-web.org.springframework.security.web.context" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>5993</key>
+            <value realName="spring-security-web.org.springframework.security.MockPortResolver" type="class" localSize="1" size="34" displayName="spring-security-web.org.springframework.security.MockPortResolver" navigationName="spring-security-web.org.springframework.security.MockPortResolver" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>18026</key>
+            <value realName="spring-security-test" type="jar" localSize="0" size="17727" displayName="spring-security-test" navigationName="spring-security-test" isModule="true" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51563</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet" type="package" localSize="0" size="49004" displayName="spring-security-config.org.springframework.security.config.web.servlet" navigationName="spring-security-config.org.springframework.security.config.web.servlet" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51564</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers" type="package" localSize="0" size="51591" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>371</key>
+            <value realName="spring-security-config.org.springframework.security.config.websocket.WebSocketMessageBrokerConfigTests" type="class" localSize="1" size="1147" displayName="spring-security-config.org.springframework.security.config.websocket.WebSocketMessageBrokerConfigTests" navigationName="spring-security-config.org.springframework.security.config.websocket.WebSocketMessageBrokerConfigTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2676</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.HttpSecurityDsl" type="class" localSize="1" size="835" displayName="spring-security-config.org.springframework.security.config.web.servlet.HttpSecurityDsl" navigationName="spring-security-config.org.springframework.security.config.web.servlet.HttpSecurityDsl" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>7796</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.CsrfConfigurer" type="class" localSize="1" size="365" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.CsrfConfigurer" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.CsrfConfigurer" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51577</key>
+            <value realName="spring-security-web.org.springframework.security.web.csrf" type="package" localSize="0" size="4328" displayName="spring-security-web.org.springframework.security.web.csrf" navigationName="spring-security-web.org.springframework.security.web.csrf" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51836</key>
+            <value realName="spring-security-test.org.springframework.security.test.web.servlet.response" type="package" localSize="0" size="716" displayName="spring-security-test.org.springframework.security.test.web.servlet.response" navigationName="spring-security-test.org.springframework.security.test.web.servlet.response" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2175</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2ClientDsl" type="class" localSize="1" size="193" displayName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2ClientDsl" navigationName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2ClientDsl" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51590</key>
+            <value realName="spring-security-test.org.springframework.security.test.web.servlet" type="package" localSize="0" size="9064" displayName="spring-security-test.org.springframework.security.test.web.servlet" navigationName="spring-security-test.org.springframework.security.test.web.servlet" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2695</key>
+            <value realName="spring-security-web.org.springframework.security.web.firewall.StrictHttpFirewallTests" type="class" localSize="1" size="2155" displayName="spring-security-web.org.springframework.security.web.firewall.StrictHttpFirewallTests" navigationName="spring-security-web.org.springframework.security.web.firewall.StrictHttpFirewallTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51592</key>
+            <value realName="spring-security-ldap.org.springframework.security.ldap.userdetails" type="package" localSize="0" size="5747" displayName="spring-security-ldap.org.springframework.security.ldap.userdetails" navigationName="spring-security-ldap.org.springframework.security.ldap.userdetails" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>31884</key>
+            <value realName="spring-security-core.org.springframework.security.authentication.ProviderManager.authenticate(org.springframework.security.core.Authentication):org.springframework.security.core.Authentication" type="method" localSize="137" size="137" displayName="spring-security-core.org.springframework.security.authentication.ProviderManager.authenticate(org.springframework.security.core.Authentication):org.springframework.security.core.Authentication" navigationName="spring-security-core.org.springframework.security.authentication.ProviderManager.authenticate(org.springframework.security.core.Authentication):org.springframework.security.core.Authentication" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1936</key>
+            <value realName="spring-security-config.org.springframework.security.config.http.OAuth2ResourceServerBeanDefinitionParserTests" type="class" localSize="1" size="3905" displayName="spring-security-config.org.springframework.security.config.http.OAuth2ResourceServerBeanDefinitionParserTests" navigationName="spring-security-config.org.springframework.security.config.http.OAuth2ResourceServerBeanDefinitionParserTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>44181</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.HeadersDsl$get$1.invoke(org.springframework.security.config.annotation.web.configurers.HeadersConfigurer):void" type="method" localSize="370" size="370" displayName="spring-security-config.org.springframework.security.config.web.servlet.HeadersDsl$get$1.invoke(org.springframework.security.config.annotation.web.configurers.HeadersConfigurer):void" navigationName="spring-security-config.org.springframework.security.config.web.servlet.HeadersDsl$get$1.invoke(org.springframework.security.config.annotation.web.configurers.HeadersConfigurer):void" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2969</key>
+            <value realName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.DefaultReactiveOAuth2AuthorizedClientManagerTests" type="class" localSize="1" size="2020" displayName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.DefaultReactiveOAuth2AuthorizedClientManagerTests" navigationName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.DefaultReactiveOAuth2AuthorizedClientManagerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2205</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.HttpSecurityDslKt" type="class" localSize="1" size="34" displayName="spring-security-config.org.springframework.security.config.web.servlet.HttpSecurityDslKt" navigationName="spring-security-config.org.springframework.security.config.web.servlet.HttpSecurityDslKt" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51613</key>
+            <value realName="spring-security-web.org.springframework.security.web.access" type="package" localSize="0" size="8019" displayName="spring-security-web.org.springframework.security.web.access" navigationName="spring-security-web.org.springframework.security.web.access" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51614</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.builders" type="package" localSize="0" size="3710" displayName="spring-security-config.org.springframework.security.config.annotation.web.builders" navigationName="spring-security-config.org.springframework.security.config.annotation.web.builders" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51871</key>
+            <value realName="spring-security-config.org.springframework.security.config.crypto" type="package" localSize="0" size="510" displayName="spring-security-config.org.springframework.security.config.crypto" navigationName="spring-security-config.org.springframework.security.config.crypto" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51616</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.headers" type="package" localSize="0" size="7689" displayName="spring-security-config.org.springframework.security.config.web.servlet.headers" navigationName="spring-security-config.org.springframework.security.config.web.servlet.headers" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51617</key>
+            <value realName="spring-security-core.org.springframework.security.authentication" type="package" localSize="0" size="12956" displayName="spring-security-core.org.springframework.security.authentication" navigationName="spring-security-core.org.springframework.security.authentication" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>36004</key>
+            <value realName="spring-security-web.org.springframework.security.web.util.TextEscapeUtils.escapeEntities(java.lang.String):java.lang.String" type="method" localSize="168" size="168" displayName="spring-security-web.org.springframework.security.web.util.TextEscapeUtils.escapeEntities(java.lang.String):java.lang.String" navigationName="spring-security-web.org.springframework.security.web.util.TextEscapeUtils.escapeEntities(java.lang.String):java.lang.String" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51620</key>
+            <value realName="spring-security-oauth2-client.org.springframework.security.oauth2.client.endpoint" type="package" localSize="0" size="13382" displayName="spring-security-oauth2-client.org.springframework.security.oauth2.client.endpoint" navigationName="spring-security-oauth2-client.org.springframework.security.oauth2.client.endpoint" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2731</key>
+            <value realName="spring-security-config.org.springframework.security.config.http.SessionManagementConfigTests" type="class" localSize="1" size="1578" displayName="spring-security-config.org.springframework.security.config.http.SessionManagementConfigTests" navigationName="spring-security-config.org.springframework.security.config.http.SessionManagementConfigTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>8876</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.server.ServerHttpSecurity.build():org.springframework.security.web.server.SecurityWebFilterChain" type="method" localSize="292" size="292" displayName="spring-security-config.org.springframework.security.config.web.server.ServerHttpSecurity.build():org.springframework.security.web.server.SecurityWebFilterChain" navigationName="spring-security-config.org.springframework.security.config.web.server.ServerHttpSecurity.build():org.springframework.security.web.server.SecurityWebFilterChain" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>3758</key>
+            <value realName="spring-security-saml2-service-provider.org.springframework.security.saml2.provider.service.authentication.OpenSamlAuthenticationProviderTests" type="class" localSize="1" size="1696" displayName="spring-security-saml2-service-provider.org.springframework.security.saml2.provider.service.authentication.OpenSamlAuthenticationProviderTests" navigationName="spring-security-saml2-service-provider.org.springframework.security.saml2.provider.service.authentication.OpenSamlAuthenticationProviderTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>36785</key>
+            <value realName="spring-security-config.org.springframework.security.config.http.HttpConfigurationBuilder.createSessionManagementFilters():void" type="method" localSize="370" size="370" displayName="spring-security-config.org.springframework.security.config.http.HttpConfigurationBuilder.createSessionManagementFilters():void" navigationName="spring-security-config.org.springframework.security.config.http.HttpConfigurationBuilder.createSessionManagementFilters():void" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1461</key>
+            <value realName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunctionTests" type="class" localSize="1" size="2784" displayName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunctionTests" navigationName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunctionTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51644</key>
+            <value realName="spring-security-config.org.springframework.security.config.http" type="package" localSize="0" size="30538" displayName="spring-security-config.org.springframework.security.config.http" navigationName="spring-security-config.org.springframework.security.config.http" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>963</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurityTests" type="class" localSize="1" size="1219" displayName="spring-security-config.org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurityTests" navigationName="spring-security-config.org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurityTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2501</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2ResourceServerDsl" type="class" localSize="1" size="277" displayName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2ResourceServerDsl" navigationName="spring-security-config.org.springframework.security.config.web.servlet.OAuth2ResourceServerDsl" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51655</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.session" type="package" localSize="0" size="1952" displayName="spring-security-config.org.springframework.security.config.web.servlet.session" navigationName="spring-security-config.org.springframework.security.config.web.servlet.session" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51912</key>
+            <value realName="spring-security-web.org.springframework.security.test" type="package" localSize="0" size="158" displayName="spring-security-web.org.springframework.security.test" navigationName="spring-security-web.org.springframework.security.test" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2250</key>
+            <value realName="spring-security-config.org.springframework.security.config.http.MiscHttpConfigTests" type="class" localSize="1" size="2491" displayName="spring-security-config.org.springframework.security.config.http.MiscHttpConfigTests" navigationName="spring-security-config.org.springframework.security.config.http.MiscHttpConfigTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>204</key>
+            <value realName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServerOAuth2AuthorizedClientExchangeFilterFunctionTests" type="class" localSize="1" size="2969" displayName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServerOAuth2AuthorizedClientExchangeFilterFunctionTests" navigationName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.reactive.function.client.ServerOAuth2AuthorizedClientExchangeFilterFunctionTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>55756</key>
+            <value realName="root" type="root" localSize="0" size="624486" displayName="root" navigationName="root" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>717</key>
+            <value realName="spring-security-web.org.springframework.security.web.util.OnCommittedResponseWrapperTests" type="class" localSize="1" size="2112" displayName="spring-security-web.org.springframework.security.web.util.OnCommittedResponseWrapperTests" navigationName="spring-security-web.org.springframework.security.web.util.OnCommittedResponseWrapperTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>55757</key>
+            <value realName="spring-security-config.org.springframework.security.config.authentication" type="package" localSize="0" size="2064" displayName="spring-security-config.org.springframework.security.config.authentication" navigationName="spring-security-config.org.springframework.security.config.authentication" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>55758</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation" type="package" localSize="0" size="88428" displayName="spring-security-config.org.springframework.security.config.annotation" navigationName="spring-security-config.org.springframework.security.config.annotation" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>55759</key>
+            <value realName="spring-security-config.org.springframework.security.config.authentication" type="package" localSize="0" size="2064" displayName="spring-security-config.org.springframework.security.config.authentication" navigationName="spring-security-config.org.springframework.security.config.authentication" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>3280</key>
+            <value realName="spring-security-oauth2-client.org.springframework.security.oauth2.client.AuthorizedClientServiceReactiveOAuth2AuthorizedClientManagerTests" type="class" localSize="1" size="1861" displayName="spring-security-oauth2-client.org.springframework.security.oauth2.client.AuthorizedClientServiceReactiveOAuth2AuthorizedClientManagerTests" navigationName="spring-security-oauth2-client.org.springframework.security.oauth2.client.AuthorizedClientServiceReactiveOAuth2AuthorizedClientManagerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>464</key>
+            <value realName="spring-security-rsocket.org.springframework.security.rsocket.core.PayloadInterceptorRSocketTests" type="class" localSize="1" size="2121" displayName="spring-security-rsocket.org.springframework.security.rsocket.core.PayloadInterceptorRSocketTests" navigationName="spring-security-rsocket.org.springframework.security.rsocket.core.PayloadInterceptorRSocketTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>55760</key>
+            <value realName="spring-security-config.org.springframework.security.config.core" type="package" localSize="0" size="1026" displayName="spring-security-config.org.springframework.security.config.core" navigationName="spring-security-config.org.springframework.security.config.core" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>55761</key>
+            <value realName="spring-security-config.org.springframework.security.config.authentication.A" type="class" localSize="1" size="11" displayName="spring-security-config.org.springframework.security.config.authentication.A" navigationName="spring-security-config.org.springframework.security.config.authentication.A" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>55762</key>
+            <value realName="spring-security-config.org.springframework.security.config.authentication.C" type="class" localSize="1" size="11" displayName="spring-security-config.org.springframework.security.config.authentication.C" navigationName="spring-security-config.org.springframework.security.config.authentication.C" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>2515</key>
+            <value realName="saml2-service-provider-opensaml3.org.springframework.security.saml2.provider.service.authentication.OpenSamlAuthenticationProvider" type="class" localSize="1" size="1254" displayName="saml2-service-provider-opensaml3.org.springframework.security.saml2.provider.service.authentication.OpenSamlAuthenticationProvider" navigationName="saml2-service-provider-opensaml3.org.springframework.security.saml2.provider.service.authentication.OpenSamlAuthenticationProvider" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>55763</key>
+            <value realName="spring-security-config.org.springframework.security.config.core.B" type="class" localSize="1" size="17" displayName="spring-security-config.org.springframework.security.config.core.B" navigationName="spring-security-config.org.springframework.security.config.core.B" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51668</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configuration" type="package" localSize="0" size="6345" displayName="spring-security-config.org.springframework.security.config.annotation.web.configuration" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configuration" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51672</key>
+            <value realName="spring-security-test.org.springframework.security.test.web.servlet.request" type="package" localSize="0" size="6478" displayName="spring-security-test.org.springframework.security.test.web.servlet.request" navigationName="spring-security-test.org.springframework.security.test.web.servlet.request" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>219</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.oauth2.client.OAuth2LoginConfigurerTests" type="class" localSize="1" size="2350" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.oauth2.client.OAuth2LoginConfigurerTests" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.oauth2.client.OAuth2LoginConfigurerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51688</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.servlet.oauth2" type="package" localSize="0" size="5553" displayName="spring-security-config.org.springframework.security.config.web.servlet.oauth2" navigationName="spring-security-config.org.springframework.security.config.web.servlet.oauth2" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>6123</key>
+            <value realName="spring-security-acl.org.springframework.security.acls.domain.AclImplTests" type="class" localSize="1" size="2559" displayName="spring-security-acl.org.springframework.security.acls.domain.AclImplTests" navigationName="spring-security-acl.org.springframework.security.acls.domain.AclImplTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1518</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer" type="class" localSize="1" size="731" displayName="spring-security-config.org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer" navigationName="spring-security-config.org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1007</key>
+            <value realName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizedClientManagerTests" type="class" localSize="1" size="1492" displayName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizedClientManagerTests" navigationName="spring-security-oauth2-client.org.springframework.security.oauth2.client.web.DefaultOAuth2AuthorizedClientManagerTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51702</key>
+            <value realName="spring-security-config.org.springframework.security.config.authentication" type="package" localSize="0" size="2042" displayName="spring-security-config.org.springframework.security.config.authentication" navigationName="spring-security-config.org.springframework.security.config.authentication" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>51704</key>
+            <value realName="spring-security-config.org.springframework.security.config.annotation.method" type="package" localSize="0" size="8090" displayName="spring-security-config.org.springframework.security.config.annotation.method" navigationName="spring-security-config.org.springframework.security.config.annotation.method" isModule="false" isModuleInterface="false"/>
+        </entry>
+        <entry>
+            <key>1535</key>
+            <value realName="spring-security-config.org.springframework.security.config.web.server.HeaderSpecTests" type="class" localSize="1" size="804" displayName="spring-security-config.org.springframework.security.config.web.server.HeaderSpecTests" navigationName="spring-security-config.org.springframework.security.config.web.server.HeaderSpecTests" isModule="false" isModuleInterface="false"/>
+        </entry>
+    </nodeMap>
+</KeyMeasureData>
