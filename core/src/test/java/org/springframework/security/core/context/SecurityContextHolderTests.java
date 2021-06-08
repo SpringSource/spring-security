@@ -58,4 +58,12 @@ public class SecurityContextHolderTests {
 		assertThatIllegalArgumentException().isThrownBy(() -> SecurityContextHolder.setContext(null));
 	}
 
+	@Test
+	public void peekContextWhenInvokedThenReturnsContextWithoutCreating() {
+		assertThat(SecurityContextHolder.peekContext()).isNull();
+		SecurityContextHolder.getContext();
+		assertThat(SecurityContextHolder.peekContext()).isNotNull();
+		SecurityContextHolder.clearContext();
+	}
+
 }

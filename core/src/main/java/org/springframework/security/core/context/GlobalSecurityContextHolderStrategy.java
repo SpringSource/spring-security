@@ -16,6 +16,7 @@
 
 package org.springframework.security.core.context;
 
+import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 
 /**
@@ -45,6 +46,7 @@ final class GlobalSecurityContextHolderStrategy implements SecurityContextHolder
 	}
 
 	@Override
+	@Nullable
 	public SecurityContext peekContext() {
 		return contextHolder;
 	}

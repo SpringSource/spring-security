@@ -18,6 +18,7 @@ package org.springframework.security.core.context;
 
 import java.lang.reflect.Constructor;
 
+import org.springframework.lang.Nullable;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.util.StringUtils;
 
@@ -111,9 +112,16 @@ public class SecurityContextHolder {
 	}
 
 	/**
-	 * Peeks the current <code>SecurityContext</code>.
+	 * When using a Spring-Security-provided <code>SecurityContextHolderStrategy</code>,
+	 * this method obtains the current <code>SecurityContext</code> without creating one.
+	 *
+	 * When using a custom <code>SecurityContextHolderStrategy</code>, behavior will
+	 * depend on whether or not the {@link SecurityContextHolderStrategy#peekContext()}
+	 * method has been overridden.
 	 * @return the security context (may be <code>null</code>)
+	 * @since 5.6
 	 */
+	@Nullable
 	public static SecurityContext peekContext() {
 		return strategy.peekContext();
 	}
