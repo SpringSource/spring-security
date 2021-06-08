@@ -3,7 +3,7 @@
 
 This section describes the testing support provided by Spring Security.
 
-[TIP]
+[NOTE]
 ====
 To use the Spring Security test support, you must include `spring-security-test-{spring-security-version}.jar` as a dependency of your project.
 ====
