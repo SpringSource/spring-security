@@ -104,7 +104,7 @@ public class JdbcAclService implements AclService {
 		String javaType = rs.getString("class");
 		Serializable identifier = (Serializable) rs.getObject("obj_id");
 		identifier = this.aclClassIdUtils.identifierFrom(identifier, rs);
-		return objectIdentityGenerator.createObjectIdentity(javaType, identifier.getClass().getName());
+		return objectIdentityGenerator.createObjectIdentity(identifier,javaType);
 	}
 
 	@Override

@@ -556,7 +556,7 @@ public class BasicLookupStrategy implements LookupStrategy {
 				// target id type, e.g. UUID.
 				Serializable identifier = (Serializable) rs.getObject("object_id_identity");
 				identifier = BasicLookupStrategy.this.aclClassIdUtils.identifierFrom(identifier, rs);
-				ObjectIdentity objectIdentity = objectIdentityGenerator.createObjectIdentity(rs.getString("class"), identifier.getClass().getName());
+				ObjectIdentity objectIdentity = objectIdentityGenerator.createObjectIdentity(identifier,rs.getString("class"));
 
 				Acl parentAcl = null;
 				long parentAclId = rs.getLong("parent_object");
